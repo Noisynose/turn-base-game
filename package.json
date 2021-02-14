@@ -11,13 +11,13 @@
   "scripts": {
     "auto-fix": "npm-run-all lint format",
     "build": "npm-run-all clean tsc",
+    "build:start": "node dist/index.js",
     "clean": "rimraf dist",
     "format": "yarn run prettier --write",
     "lint": "eslint --ext js,jsx,ts,tsx .",
     "nodemon": "nodemon --watch dist",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{css,html,js,jsx,json,ts,tsx,md,mdx,yml,yaml}\"",
-    "start": "node dist/index.js",
-    "dev": "npm-run-all build --parallel tsc:watch nodemon",
+    "start": "npm-run-all build --parallel tsc:watch nodemon",
     "test": "jest",
     "tsc": "tsc",
     "tsc:watch": "tsc --watch"
